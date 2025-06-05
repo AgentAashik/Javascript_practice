@@ -158,10 +158,80 @@ const PhoneNumberValid = (PH) => {
     else if(PH.length < 10){
         return 'Invalid'
     }
-    else {
+    else  {
         return 'Valid'
     }
 }
 
-let PhValid = PhoneNumberValid(9938923856)
+let PhValid = PhoneNumberValid(111)
 console.log("Phvalid=====>", PhValid)
+
+
+function Itembought(item){
+    let prize = null;
+    switch (true){
+        case (item<=10) :
+            prize ='Coffee Mug';
+            break;
+        case ((item>=10) && (item<=20)):
+            prize ='Free Coupon';
+            break;
+        case (item>=30): 
+            prize ='Microwave';
+            break;
+        default:
+            prize = 'No Prize';
+            break;
+
+        }
+
+        return prize
+}
+
+
+let prizeResult = Itembought(70)
+
+console.log("prizeResult====>",prizeResult)
+
+const multiplyByThree = (begin, finish) => {
+    let num = begin;
+    while (num <= finish) {
+        console.log(`${num} x 3 = ${num * 3}`);
+        num++;
+    }
+}
+multiplyByThree(2, 8);
+
+
+const countdownLogger = (start, stop) => {
+    let count = start;
+    do {
+        console.log("Counting Down:", count);
+        count--;
+    } while (count >= stop);
+}
+countdownLogger(5, 1);
+
+
+const evenNumberPrinter = (min, max) => {
+    for (let num = min; num <= max; num++) {
+        if (num % 2 === 0) {
+            console.log("Even Number:", num);
+        }
+    }
+}
+evenNumberPrinter(1, 15);
+
+const showStudentIndexes = (students) => {
+    for (let index in students) {
+        console.log("Student Index:", index);
+    }
+}
+showStudentIndexes(["John", "Sara", "Mike", "Luna"]);
+
+const showCityNames = (cities) => {
+    for (let city of cities) {
+        console.log("City Name:", city);
+    }
+}
+showCityNames(["Tokyo", "Berlin", "Madrid", "Lisbon"]);
